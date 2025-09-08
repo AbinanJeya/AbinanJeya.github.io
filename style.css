@@ -1,47 +1,114 @@
-/* Base styles */
-body {
-  font-family: Arial, sans-serif;
+/* Import Google Font similar to example */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
 }
 
+/* Navbar */
 header {
   background: var(--nav-bg);
-  color: var(--text);
-  padding: 1rem;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 nav a {
-  color: var(--text);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero */
 .hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 4rem 1rem;
 }
 
-section {
-  padding: 2rem 1rem;
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
 .project-card {
   border: 1px solid var(--border);
+  border-radius: 8px;
   padding: 1rem;
   margin: 1rem 0;
-  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--nav-bg);
+  color: var(--text);
 }
 
 /* Light Theme */
@@ -50,6 +117,7 @@ section {
   --text: #222222;
   --nav-bg: #f4f4f4;
   --border: #cccccc;
+  --accent: #007bff;
 }
 
 /* Dark Theme */
@@ -58,9 +126,10 @@ body.dark {
   --text: #f4f4f4;
   --nav-bg: #1e1e1e;
   --border: #444444;
+  --accent: #4dabf7;
 }
 
-/* Apply theme */
+/* Apply theme colors */
 body {
   background: var(--bg);
   color: var(--text);
