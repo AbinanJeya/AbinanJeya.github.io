@@ -1,65 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abinan Jeyachandran | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="darkmode.js" defer></script>
+
+    <title>Portfolio</title>
 </head>
-<body>
-  <!-- Navbar -->
-  <header>
+
+<body class="darkmode">
+    <!-- Dark/light mode button  -->
+    <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
+
+    </button>
+
+    <!-- NAVBAR  -->
     <nav>
-      <div class="logo">Abinan Jeyachandran</div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle">🌙</button>
+<div class="left">
+    <a href="/">Abinan Jeyachandran</a>
+</div>
+<div class="right">
+    <a href="https://github.com/Abzamer13" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i> 
+        <span>
+            Github
+        </span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/abinan-jeyachandran-abb528183/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i> <!-- logo from fontawesome -->
+        <span>
+            Linkedin
+        </span>
+    </a>
+
+    <a href="mailto:abinan.jeyachandran@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>
+            Email
+        </span>
+    </a>
+    
+</div>
+
     </nav>
-  </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <h1>Hi, I'm Abinan</h1>
-    <h2>Computer Engineering Graduate</h2>
-  </section>
+    <main>
+    <!-- SECTION 1: HERO -->
+    <section class="hero-section">
+        <div class="text">
+            <h2>Hi I'm Abinan 👋</h2>
+            <p>I'm a Computer Engineering graduate from Toronto Metropolitan University with expertise in software development, system optimization, and AI integration. I enjoy building efficient solutions that solve real-world problems.</p>
+            <div class="links">
+                <a href="#skills">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm a Computer Engineering graduate passionate about technology, coding, and creating impactful projects. 
-      This is my personal portfolio website.
-    </p>
-  </section>
+                <a href="#Testimony">
+                    <i class="fa-solid fa-pen"></i>
+                    <span>Testimony</span>
+                        
+                <a href="#Contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>          
+                </a>
+            </div>
+        </div>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Project Title</h3>
-      <p>Short description of your project goes here.</p>
-      <a href="#">View on GitHub</a>
-    </div>
-    <!-- Add more project cards here -->
-  </section>
+        <div class="headshot">
+        <img src=hero-headshot.webp alt="Abinan Headshot"> 
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>
-      Connect with me on 
-      <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>.
-    </p>
-  </section>
+    <!-- SECTION 2: Skills -->
+    <section id="Skills" class="skills-section"> 
+        <h2>Skills</h2>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam excepturi minima reiciendis repudiandae quis recusandae debitis architecto dignissimos aut. Dicta explicabo reiciendis a maiores qui facilis voluptatem reprehenderit, nam fugiat?
+        </div>
+        <div class="cells">
+            <div class="cell">
+                <img src="html-logo.webp" alt="html logo">
+                <span>HTML</span>
+            </div>
 
-  <footer>
-    <p>© 2025 Abinan Jeyachandran</p>
-  </footer>
+            <div class="cell">
+                <img src="css-logo.webp" alt="css logo">
+                <span>CSS</span>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="cell">
+                <img src="python-logo.webp" alt="python logo">
+                <span>Python</span>
+            </div>
+
+            <div class="cell">
+                <img src="javascript-logo.webp" alt="javascript logo">
+                <span>Javascript</span>
+            </div>
+
+            <div class="cell">
+                <img src="nodejs-logo.webp" alt="nodejs logo">
+                <span>NodeJS</span>
+            </div>
+
+            <div class="cell">
+                <img src="react-logo.webp" alt="react logo">
+                <span>React</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Projects -->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Parallel Computing Customer Analysis System</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill">C++</span>
+                            <span class="tech-pill">OpenMP</span>
+                            <span class="tech-pill">Multithreading</span>
+                        </div>
+                        <p class="project-description">A high-performance data processing system leveraging parallel computing techniques.</p>
+                        <ul class="project-features">
+                            <li>Boosted data processing speed by 60% using multi-threaded backend with OpenMP</li>
+                            <li>Ensured data accuracy with thread synchronization techniques</li>
+                            <li>Reduced runtime by 40% through algorithm optimization in Agile sprints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Secure Banking System</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">AES Encryption</span>
+                            <span class="tech-pill">HMAC</span>
+                            <span class="tech-pill">Socket Programming</span>
+                        </div>
+                        <p class="project-description">A client-server banking application with robust security measures.</p>
+                        <ul class="project-features">
+                            <li>Secured financial transactions using client-server architecture with Python sockets</li>
+                            <li>Protected data integrity with AES encryption and HMAC authentication</li>
+                            <li>Reduced debugging time by 50% through encrypted logging for real-time monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Bookstore Management System</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">JavaFX</span>
+                            <span class="tech-pill">MySQL</span>
+                            <span class="tech-pill">Design Patterns</span>
+                        </div>
+                        <p class="project-description">A comprehensive inventory and sales management system for bookstores.</p>
+                        <ul class="project-features">
+                            <li>Improved data security via role-based access control in Java/MySQL</li>
+                            <li>Optimized database queries using Singleton design pattern for performance</li>
+                            <li>Enhanced user experience with responsive UI developed in JavaFX</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">AI Code Optimization Suite</h3>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">LLaMA 3</span>
+                            <span class="tech-pill">RAG</span>
+                            <span class="tech-pill">OpenAI API</span>
+                        </div>
+                        <p class="project-description">An AI-powered tool to streamline and optimize code development processes.</p>
+                        <ul class="project-features">
+                            <li>Reduced code generation time by 75% by integrating RAG with automated testing</li>
+                            <li>Built modular backend with LLM and API integration for dynamic validation</li>
+                            <li>Improved development speed by 30% through AI-assisted testing and automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    
+    
+    
+    
+
+    <!-- SECTION 4: Contact -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>Feel free to reach out to me for collaboration or any inquiries!</p>
+                <div class="contact-details">
+                    <a href="mailto:abinan.jeyachandran@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>abinan.jeyachandran@gmail.com</span>
+                    </a>
+                    <a href="tel:647-803-9461">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>647-803-9461</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abinan-jeyachandran-abb528183/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
 </body>
 </html>
