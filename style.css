@@ -235,6 +235,7 @@ nav .right a span{
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 -10px 25px var(--hover-color);
+    
 }
 
 .project-card:hover .darkmode {
@@ -441,7 +442,7 @@ box-shadow: 0 -10px 25px var(--hover-color);
     width: 30px;
     padding: 0;
     border-radius: 50%;
-    background-color: var(--background-color);
+    background-color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -450,7 +451,6 @@ box-shadow: 0 -10px 25px var(--hover-color);
     right: 20px;
     z-index: 1000;
     cursor: pointer;
-    border: 2px solid var(--text-color);
     transition: all 0.3s ease;
 }
 
@@ -459,17 +459,20 @@ box-shadow: 0 -10px 25px var(--hover-color);
     background-color: var(--hover-color);
 }
 
-#theme-switch svg:last-child {
-    display: none;
+/* Default: light mode */
+#theme-switch svg:first-child {  /* sun */
+  fill: #FFD700; /* yellow */
 }
 
-.darkmode #theme-switch svg:first-child {
-    display: none;
+#theme-switch svg:last-child {   /* moon */
+  fill: #000000; /* blue */
 }
 
-.darkmode #theme-switch svg:last-child {
-    display: block;
-}
+/* Toggle visibility */
+#theme-switch svg:last-child { display: none; }
+.darkmode #theme-switch svg:first-child { display: none; }
+.darkmode #theme-switch svg:last-child { display: block; }
+
 
 /* Adjust navbar for the fixed button */
 nav {
@@ -550,3 +553,4 @@ border-radius: 1px;
 0% { background-position: 0% 0%; }
 100% { background-position: 200% 0%; }
 }
+
