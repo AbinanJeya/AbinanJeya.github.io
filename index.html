@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="darkmode.js" defer></script>
-
+    <script type="text/javascript" src="script.js" defer></script>
     <title>Portfolio</title>
 </head>
 
@@ -23,6 +23,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M380-880q83 0 156 31.5T663-763q54 54 85.5 127T780-480q0 83-31.5 156T663-197q-54 54-127 85.5T380-80q-53 0-103.5-13.5T180-134q93-54 146.5-146T380-480q0-108-53.5-200T180-826q46-27 96.5-40.5T380-880Z"/></svg>
 
     </button>
+
+    
 
     <!-- NAVBAR  -->
     <nav>
@@ -62,7 +64,7 @@
             <h2>Hi I'm Abinan 👋</h2>
             <p>I'm a Computer Engineering graduate from Toronto Metropolitan University with expertise in software development, system optimization, and AI integration. I enjoy building efficient solutions that solve real-world problems.</p>
             <div class="links">
-                <a href="#skills">
+                <a href="#Skills">
                     <i class="fa-solid fa-code"></i>
                     <span>Skills</span>
 
@@ -74,12 +76,19 @@
                     <i class="fa-solid fa-envelope"></i>
                     <span>Contact</span>          
                 </a>
+                <!-- New Resume Button -->
+                <a href="assets/Abinan_Jeyachandran_Resume.pdf" download id="resumeBtn">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Resume</span>
+                </a>
             </div>
         </div>
 
         <div class="headshot">
         <img src=hero-headshot.webp alt="Abinan Headshot"> 
         </div>
+        <hr class="section-divider">
+
     </section>
 
     <!-- SECTION 2: Skills -->
@@ -116,10 +125,11 @@
                 <span>React</span>
             </div>
         </div>
+        <hr class="section-divider">
     </section>
 
     <!-- SECTION 3: Projects -->
-        <section id="projects" class="projects-section">
+        <section id="Projects" class="projects-section">
             <h2>Projects</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
@@ -197,6 +207,7 @@
                     </div>
                 </div>
             </div>
+            <hr class="section-divider">
         </section>
 
 
@@ -206,7 +217,7 @@
     
 
     <!-- SECTION 4: Contact -->
-        <section id="contact" class="contact-section">
+        <section id="Contact" class="contact-section">
             <h2>Contact</h2>
             <div class="contact-info">
                 <p>Feel free to reach out to me for collaboration or any inquiries!</p>
@@ -225,7 +236,7 @@
                     </a>
                 </div>
             </div>
-            
+            <hr class="section-divider">
         </section>
     </main>
 </body>
