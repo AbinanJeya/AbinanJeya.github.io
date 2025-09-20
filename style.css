@@ -520,7 +520,7 @@ background: linear-gradient(
 background-size: 300% 300%;
 animation: rgb-border 6s linear infinite;
 z-index: -1;
-  opacity: 0;  /* hide by default */
+opacity: 0;  /* hide by default */
 transition: opacity 0.3s ease;
 }
 
