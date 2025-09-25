@@ -1,21 +1,19 @@
-:root{
-    --text-color: #1a1c20;
-    --link-color: #4a76ee; 
-    --background-color: #ffffff;
-    --background-tile-color:#ffffff;
-    --hover-color:#00000026;
+:root {
+    --background-color: #F9FAFB;
+    --background-tile-color: #FFFFFF;
+    --text-color: #1C1C1E;
+    --link-color: #4F46E5;
+    --hover-color: #E0E7FF;
 }
-.darkmode{
-    --text-color: #eeeff1;
-    --link-color: #8800ff; 
-    --background-color: #1a1c20;
-    --background-tile-color:#3e3e3e;
-    --background-text-color:#3e3e3e;
-    --hover-color:#FFFFFF99;
 
-
-
+.darkmode {
+    --background-color: #121212;
+    --background-tile-color: #1F1F1F;
+    --text-color: #E5E7EB;
+    --link-color: #8B5CF6;
+    --hover-color: #4F46E5;
 }
+
 
 /* TARGET ALL ELEMENTS */
 *{
@@ -350,6 +348,56 @@ box-shadow: 0 -10px 25px var(--hover-color);
     margin-right: 10px;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    background-color: var(--background-tile-color);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--link-color);
+    box-shadow: 0 0 10px var(--link-color);
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    color: var(--text-color);
+    background-color: var(--link-color);
+    box-shadow: 0 0 10px var(--link-color);
+}
+
+.form-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--link-color);
+}
+
 /***************** MOBILE STYLES ********************************/
 
 @media (max-width: 740px){
@@ -468,6 +516,8 @@ box-shadow: 0 -10px 25px var(--hover-color);
   fill: #000000; /* blue */
 }
 
+
+
 /* Toggle visibility */
 #theme-switch svg:last-child { display: none; }
 .darkmode #theme-switch svg:first-child { display: none; }
@@ -554,3 +604,29 @@ border-radius: 1px;
 100% { background-position: 200% 0%; }
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+
+/* Simple particle trail */
+.cursor-dot {
+position: fixed;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background-color: var(--link-color);
+pointer-events: none;
+z-index: 9999;
+transform: translate(-50%, -50%);
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover ~ .cursor-dot {
+transform: translate(-50%, -50%) scale(2);
+background-color: #ff6b6b;
+}
