@@ -596,86 +596,270 @@ nav .right a span{
 
 /***************** MOBILE STYLES ********************************/
 
-@media (max-width: 740px){
-    /* SECTION 1: HERO */
-    .hero-section {
-        flex-direction: column-reverse; 
-
-    }
-    .hero-section .headshot img{
-    width: 300px;
-    }
-
-/* PROJECTS SECTION */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-}
-
-@media (max-width: 840px){
-
-    /* SECTION 1: HERO */
-    .hero-section .text h2 {
-        font-size: 35px; 
-    }
-
-    /* NAVBAR & SECTIONS */
+/* Tablet — 840px */
+@media (max-width: 840px) {
+    /* Reduce padding across all sections */
     nav, .hero-section, .skills-section, .projects-section, .contact-section {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    nav {
+        padding-right: 80px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+
+    /* Smaller inline GIF on tablet */
+    .inline-gif {
+        height: 100px;
+        margin-top: -25px;
+    }
+
+    /* Smaller Vegeta GIF on tablet */
+    .masenko-gif {
+        height: 60px;
+        margin-left: -80px;
+    }
+
+    /* Slightly smaller Kamehameha on tablet */
+    .kame-divider {
+        height: 60px;
+        margin: 20px 0;
+    }
+
+    .kame-left {
+        width: 60px;
+    }
+
+    .kame-right {
+        width: 80px;
+    }
 }
 
+/* Small Tablet / Large Phone — 740px */
+@media (max-width: 740px) {
+    /* Stack hero vertically */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: 50px;
+    }
 
+    .hero-section .headshot {
+        justify-content: center;
+    }
+
+    .hero-section .headshot img {
+        width: 220px;
+    }
+
+    /* Reduce aura glow on smaller screens */
+    .hero-section .headshot img {
+        box-shadow:
+            0 0 10px rgba(59, 130, 246, 0.5),
+            0 0 20px rgba(59, 130, 246, 0.3),
+            0 0 40px rgba(99, 102, 241, 0.25),
+            0 0 60px rgba(99, 102, 241, 0.15);
+    }
+
+    .hero-section .text .links {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Projects single column */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Smaller Kamehameha */
+    .kame-divider {
+        height: 45px;
+        margin: 15px 0;
+    }
+
+    .kame-left {
+        width: 45px;
+    }
+
+    .kame-right {
+        width: 60px;
+    }
+}
+
+/* Phone — 600px */
 @media (max-width: 600px) {
-    /* NAVBAR (mobile friendly) */
-
-    nav{
-        padding: 0 20px; /* reduce horizontal padding for small screens */
+    /* Hide cursor trail on mobile (touch devices) */
+    .circle {
+        display: none;
     }
 
-    nav .right a {
-        font-size: 22px; /* keep links readable on mobile */
+    /* Restore default cursor on mobile */
+    *, *::before, *::after {
+        cursor: auto !important;
     }
 
-    nav .right a:last-child {
-        color: var(--text-color);      /* change text color for mobile */
-        background-color: transparent; /* remove button background */
-        padding: 0;                    /* remove inner spacing to shrink button */
+    /* NAVBAR */
+    nav {
+        padding: 0 15px;
+        padding-right: 60px;
+        height: 60px;
     }
 
-    nav .right a span{
-        display: none; /* hide span (usually text) to keep navbar clean */
-    }
-
-
-     /* SEECTION 1: HERO (mobile friendly) */
-
-    .hero-section{
-        padding: 0 20px;
-    }
-
-    .hero-section .text h2{
-        font-size: 30px;
-    }
-
-    /* SECTION 2: SKILLS */
-    .skills-section {
-        padding: 0 20px;
-    }
-
-    .skills-section .cells .cell span{
+    nav .left a {
         font-size: 16px;
     }
 
- /* CONTACT SECTION */
+    nav .right a {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* HERO */
+    .hero-section {
+        padding: 0 15px;
+        margin: 30px 0;
+        margin-bottom: 40px;
+        gap: 25px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 26px;
+    }
+
+    .hero-section .headshot img {
+        width: 180px;
+    }
+
+    /* Smaller inline GIF next to name */
+    .inline-gif {
+        height: 60px;
+        margin-top: -15px;
+        margin-left: 5px;
+    }
+
+    /* Smaller Vegeta GIF */
+    .masenko-gif {
+        height: 45px;
+        margin-left: -55px;
+        margin-top: -10px;
+    }
+
+    /* Typed tagline */
+    .typed-tagline {
+        font-size: 15px;
+    }
+
+    /* KAMEHAMEHA DIVIDERS */
+    .kame-divider {
+        height: 35px;
+        margin: 10px 0;
+    }
+
+    .kame-left {
+        width: 35px;
+    }
+
+    .kame-right {
+        width: 50px;
+    }
+
+    /* SKILLS */
+    .skills-section {
+        padding: 0 15px;
+        margin-top: 10px;
+    }
+
+    .skills-section h2 {
+        font-size: 28px;
+    }
+
+    .skills-section .cells .cell {
+        width: 150px;
+        padding: 10px 15px;
+        margin: 8px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 14px;
+    }
+
+    .skills-section .cells .cell img {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* PROJECTS */
+    .projects-section {
+        padding: 40px 15px;
+    }
+
+    .projects-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    /* CONTACT */
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-gif {
+        max-width: 150px;
+    }
+
     .contact-details a {
         width: 100%;
         justify-content: center;
     }
 
+    /* FOOTER */
+    footer {
+        padding: 30px 15px;
+    }
+
+    /* Theme switch */
+    #theme-switch {
+        top: 15px;
+        right: 15px;
+        width: 52px;
+        height: 28px;
+    }
+
+    .theme-slider {
+        width: 20px;
+        height: 20px;
+    }
+
+    body.darkmode .theme-slider {
+        left: calc(100% - 24px);
+    }
 }
 
 /********************************** STYLING IMPROVEMENTS ************************************************/
