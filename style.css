@@ -608,6 +608,17 @@ nav .right a span{
         padding-right: 80px;
     }
 
+    /* Hide nav text labels — switch to icon-only earlier */
+    nav .right a span {
+        display: none;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
     .hero-section .text h2 {
         font-size: 35px;
     }
@@ -706,7 +717,7 @@ nav .right a span{
     /* NAVBAR */
     nav {
         padding: 0 15px;
-        padding-right: 60px;
+        padding-right: 90px;
         height: 60px;
     }
 
@@ -844,10 +855,10 @@ nav .right a span{
         padding: 30px 15px;
     }
 
-    /* Theme switch */
+    /* Theme switch — centered in the 60px nav */
     #theme-switch {
-        top: 15px;
-        right: 15px;
+        top: 16px;
+        right: 12px;
         width: 52px;
         height: 28px;
     }
@@ -886,12 +897,6 @@ nav .right a span{
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@media (max-width: 600px) {
-    #theme-switch {
-        top: 24px; 
-        right: 20px;
-    }
-}
 
 #theme-switch:hover {
     transform: scale(1.05);
@@ -1144,3 +1149,21 @@ footer .footer-links a:hover {
     animation: fadeInUp 0.5s ease;
 }
 
+/* Mobile theme switch alignment — MUST come after desktop #theme-switch styles */
+@media (max-width: 600px) {
+    #theme-switch {
+        top: 16px;
+        right: 12px;
+        width: 52px;
+        height: 28px;
+    }
+
+    .theme-slider {
+        width: 20px;
+        height: 20px;
+    }
+
+    body.darkmode .theme-slider {
+        left: calc(100% - 24px);
+    }
+}
